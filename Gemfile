@@ -59,7 +59,7 @@ end
 # Also this source is https, but if your machine has out of
 # date SSL certs you might get SSL warnings from Ruby. In that
 # case just fall back to http, which will still work.
-#source 'http://dresssed.com/gems/a32d5c5588e50352351a/' do
-  #gem 'dresssed-gimlet'
-#end
+source 'http://dresssed.com/gems/a32d5c5588e50352351a/' do
+  gem 'dresssed-gimlet'
+end
 
