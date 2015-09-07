@@ -52,6 +52,10 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 # This is the latest Bundler syntax for specifying custom
 # sources. If you get an error with this just remove the
 # block do and end
