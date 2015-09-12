@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, path_names: {sign_in: "hunters_in", sign_out: "hunters_out"}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   root :to => "pages#index"
 
   get 'pages' => 'pages#index'
+
+  get 'hunt' => 'users#hunt'
+  get 'sell' => 'users#sell'
+  get 'feed' => 'users#feed'
 
 
 
