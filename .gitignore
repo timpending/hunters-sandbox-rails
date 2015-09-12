@@ -15,3 +15,16 @@
 /log/*
 !/log/.keep
 /tmp
+.idea/workspace.xml
+.oldideafile/.generators
+.oldideafile/.name
+.oldideafile/.rakeTasks
+.oldideafile/hunters_app.iml
+.oldideafile/misc.xml
+.oldideafile/modules.xml
+.oldideafile/runConfigurations/Development__hunters_app.xml
+.oldideafile/runConfigurations/Production__hunters_app.xml
+.oldideafile/runConfigurations/spec__hunters_app.xml
+.oldideafile/runConfigurations/test__hunters_app.xml
+.oldideafile/vcs.xml
+.oldideafile/workspace.xml
