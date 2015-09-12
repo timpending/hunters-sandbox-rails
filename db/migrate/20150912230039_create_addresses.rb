@@ -5,7 +5,7 @@ class CreateAddresses < ActiveRecord::Migration
       t.string :city
       t.string :state
       t.string :postal_code
-      t.string :country
+      t.integer :country_id
       t.integer :user_id
 
       t.timestamps null: false
