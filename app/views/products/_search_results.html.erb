@@ -1,0 +1,12 @@
+<% if @products.present? %>
+    <% @products.each do |product| %>
+        <div class="item">
+          <div class="blocked order-title"><%= product.name%></div>
+          <div class="blocked order-title"><%= number_to_currency(product.price) %></div>
+          <div class="blocked order-image"><%= link_to (image_tag product.avatar.url(:medium)), product_path(product.id) %></div>
+        </div>
+    <% end %>
+<% else %>
+  No products match your criteria.
+    Please <%= link_to "try again", hunt_path %>
+<% end %>

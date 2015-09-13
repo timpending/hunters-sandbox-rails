@@ -1,0 +1,56 @@
+<%= form_for(@product, html: {multipart: true, class: 'form-horizontal' }) do |f| %>
+  <%= f.error_notification %>
+
+
+
+
+
+  <div class="form-inputs">
+
+    <%= f.file_field :avatar %>
+
+
+
+    <%= f.form_group :name do |f| %>
+      <%= f.label :name, class: 'form-label col-md-2' %>
+      <div class='col-md-8'>
+        <%= f.text_field :name, class: 'form-control' %>
+        <%= f.error_messages %>
+      </div>
+    <% end %>
+
+    <%= f.form_group :description do |f| %>
+        <%= f.label :description, class: 'form-label col-md-2' %>
+        <div class='col-md-8'>
+          <%= f.text_field :description, class: 'form-control' %>
+          <%= f.error_messages %>
+        </div>
+    <% end %>
+
+    <%= f.form_group :price do |f| %>
+      <%= f.label :price, class: 'form-label col-md-2' %>
+      <div class='col-md-8'>
+        <%= f.text_field :price, class: 'form-control' %>
+        <%= f.error_messages %>
+      </div>
+    <% end %>
+
+    <%= f.form_group :active do |f| %>
+      <%= f.label :active, class: 'form-label col-md-2' %>
+      <div class='col-md-8'>
+        <%= f.check_box :active, class: 'form-control' %>
+        <%= f.error_messages %>
+      </div>
+    <% end %>
+
+  </div>
+
+  <div class="form-actions col-md-offset-3 col-md-9">
+    <%= f.submit class: 'btn btn-primary' %>
+    <%= link_to "Cancel", products_path, class: 'btn' %>
+  </div>
+
+
+
+<% end %>
+

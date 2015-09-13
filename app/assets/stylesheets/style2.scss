@@ -1,0 +1,13 @@
+.item{
+  float:left;
+  margin: 10px;
+  width:80px;
+  height: 100px;
+  .blocked{ display:block; text-align:center}
+  .order-title{font-size: 15px;}
+  .order-image{
+    height: auto;
+    img {max-width: 150px; max-height: 150px;}
+  }
+  .order-footer{font-size:8px;}
+}

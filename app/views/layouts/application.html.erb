@@ -18,15 +18,20 @@
       <%= yield %>
     </div> <!-- /#content -->
 
-    <div id="sidebar" class="col-md-3">
-      <h6>Menu</h6>
-      <p></p>
+    <% if current_user.orders.present? %>
+        <div id="sidebar" class="col-md-3">
+          <h6>Cart</h6>
+          <p></p>
 
-      <ul class="nav nav-tabs nav-stacked nav-caret-left">
-        <%= activatable_li_tag_with_link "Sub menu", nil %>
-        <%= activatable_li_tag_with_link "Another menu", "#" %>
-        <%= activatable_li_tag_with_link "A last one", "#" %>
-      </ul>
-    </div> <!-- /#sidebar -->
+
+          <ul class="nav nav-tabs nav-stacked nav-caret-left">
+            <%= activatable_li_tag_with_link "View Cart", cart_path %>
+            <%= activatable_li_tag_with_link "Checkout", "#" %>
+            <%#= activatable_li_tag_with_link "A last one", "#" %>
+          </ul>
+        </div> <!-- /#sidebar -->
+    <% end %>
+
+
   </div> <!-- /.row -->
 <% end %>

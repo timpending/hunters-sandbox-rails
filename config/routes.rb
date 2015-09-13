@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :products
+
+
   devise_for :users, path_names: {sign_in: "hunters_in", sign_out: "hunters_out"}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -12,7 +15,9 @@ Rails.application.routes.draw do
   get 'sell' => 'users#sell'
   get 'feed' => 'users#feed'
 
+  get 'cart' => 'carts#show'
 
+  resources :orders
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

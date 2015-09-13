@@ -1,0 +1,5 @@
+<% if current_user.orders.present? %>
+      <%= render "cart_items" %>
+<% else %>
+  Cart is empty.
+<% end %>

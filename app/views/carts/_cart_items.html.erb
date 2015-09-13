@@ -1,0 +1,13 @@
+<% current_user.orders.each do |order| %>
+    <div class="item">
+      <div>
+        <a href="/orders/<%=order.id %>" data-method="delete" rel="nofollow">
+          <span class="glyphicon glyphicon-remove" aria-hidden="false"></span>
+        </a>
+      </div>
+      <div class="blocked order-title"><%= order.product.name%></div>
+      <div class="blocked order-image"><%= link_to (image_tag order.product.avatar.url(:medium)), product_path(order.product.id) %></div>
+      <div class="blocked order-footer"><%= order.product.description%></div>
+      <div class="blocked order-footer"><%= time_limit(order) %></div>
+    </div>
+<% end %>

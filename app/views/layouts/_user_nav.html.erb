@@ -1,7 +1,7 @@
 <%# Links for current user. %>
 <div class="navbar-text pull-right">
   <% if user_signed_in? %>
-      <%= icon_tag "user" %> Welcome, <strong><%= current_user.email %></strong>
+      <%= icon_tag "user" %> Welcome, <strong><%= current_user.first_name %></strong>
       <span class="divider">|</span>
       <li>
         <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
