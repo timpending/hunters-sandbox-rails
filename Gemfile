@@ -11,6 +11,8 @@ gem 'puma'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 
+gem "paperclip", "~> 4.3"
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -52,6 +54,9 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'pry'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :production do
