@@ -11,9 +11,9 @@
   <%= image_tag @product.avatar.url(:medium), style: "height: 200px;" %>
 </div>
 <div class="show_block">
-  <span><%= @product.name %></span>
-  <span><%= @product.price %></span>
-  <span>Seller: <%= @product.user.first_name %></span>
+  <span class="show_title"><%= @product.name %></span>
+  <span><%= number_to_currency(@product.price) %></span>
+  <span>Seller: <%= @product.user.first_name || @product.user.email %></span>
   <span><%= @product.description %></span>
 </div>
 

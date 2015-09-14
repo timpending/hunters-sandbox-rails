@@ -37,9 +37,15 @@ body#splash_body{
 }
 
 .show_block{
-  width: 200px;
+  width: auto;
+  margin: 0px 20px;
   height: 200px;
   float: left;
-  span{margin-top: 10px; display:block;}
+  span{ margin-top: 10px; display:block;}
+  .show_title{font-size:18px;}
+}
+
+#sign_up_form{
+  label{position:relative; top:10px;}
 }
 
