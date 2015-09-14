@@ -1,5 +1,6 @@
 <% @title = "Showing product" %>
 
+<%# todo: hide below add to cart button also if @product.user == current_user %>
 <% unless @product.order_id.present? %>
   <%= button_to 'Add to Cart', orders_path, class: 'btn', params: {'product_id' => @product.id}%>
 <% end %>
@@ -12,7 +13,7 @@
 <div class="show_block">
   <span><%= @product.name %></span>
   <span><%= @product.price %></span>
-  <span>Seller: <%= @product.order.user.first_name %></span>
+  <span>Seller: <%= @product.user.first_name %></span>
   <span><%= @product.description %></span>
 </div>
 
