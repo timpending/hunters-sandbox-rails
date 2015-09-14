@@ -19,10 +19,19 @@
   .inner{ width:195px; margin:250px auto;}
   label{color: #fff;}
   input{margin: 10px auto;}
+  #slogan{position: relative; left: -60px; top:20px;}
 }
 
 body#splash_body{
   background-image: image-url('splash.jpg');
   background-repeat: no-repeat;
   background-position: top center;
+  text-align:center;
+  #splash_title {
+    position: relative;
+    top: -200px;
+    left: -80px;
+    img{width:350px;}
+  }
 }
+

@@ -1,5 +1,7 @@
 
-
+<div id="splash_title">
+  <%= image_tag("title") %>
+</div>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -24,3 +26,7 @@
 <% end %>
 
 <%= render "users/shared/links" %>
+
+<div id="slogan">
+  <%= image_tag("slogan") %>
+</div>
