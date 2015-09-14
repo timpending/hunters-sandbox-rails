@@ -6,38 +6,17 @@
 
 <br>
 
-<%= image_tag @product.avatar.url %>
+<div class="show_block">
+  <%= image_tag @product.avatar.url(:medium), style: "height: 200px;" %>
+</div>
+<div class="show_block">
+  <span><%= @product.name %></span>
+  <span><%= @product.price %></span>
+  <span>Seller: <%= @product.order.user.first_name %></span>
+  <span><%= @product.description %></span>
+</div>
 
-<div class="form-horizontal">
-  <div class="form-group">
-    <label class="col-md-2 form-label">Name</label>
-    <div class="col-md-10 control-label uneditable-input">
-      <span>
-        <%= @product.name %>
-      </span>
-    </div>
-  </div>
 
-  <div class="form-group">
-    <label class="col-md-2 form-label">Price</label>
-    <div class="col-md-10 control-label uneditable-input">
-      <span>
-        <%= @product.price %>
-      </span>
-    </div>
-  </div>
 
-  <div class="form-group">
-    <label class="col-md-2 form-label">Active</label>
-    <div class="col-md-10 control-label uneditable-input">
-      <span>
-        <%= @product.active %>
-      </span>
-    </div>
-  </div>
 
-  <div class="form-actions col-md-offset-2">
-    <%= link_to icon_tag("pencil") + ' Edit', edit_product_path(@product), class: 'btn btn-primary' %>
-    <%= link_to 'Back', products_path, class: 'btn' %>
-  </div>
 </div>

@@ -18,7 +18,7 @@
       <%= yield %>
     </div> <!-- /#content -->
 
-    <% if current_user && current_user.orders.present? %>
+    <% if !current_user && !current_user.orders.present? %>
         <div id="sidebar" class="col-md-3">
           <h6>Cart</h6>
           <p></p>
