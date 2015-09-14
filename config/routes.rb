@@ -2,7 +2,10 @@ Rails.application.routes.draw do
   resources :products
 
 
-  devise_for :users, path_names: {sign_in: "hunters_in", sign_out: "hunters_out"}
+  devise_for :users, controllers: { sessions: "users/sessions" }
+  #devise_for :users, controllers: { sessions: "users/sessions" }, path_names: {sign_in: "hunters_in", sign_out: "hunters_out"}
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

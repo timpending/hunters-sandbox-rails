@@ -11,3 +11,18 @@
   }
   .order-footer{font-size:8px;}
 }
+
+#splash{
+  width:100%;
+  height:100%;
+  text-align:center;
+  .inner{ width:195px; margin:250px auto;}
+  label{color: #fff;}
+  input{margin: 10px auto;}
+}
+
+body#splash_body{
+  background-image: url('splash.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+}
