@@ -13,6 +13,7 @@ gem 'rails', '4.2.4'
 
 gem "paperclip", "~> 4.3"
 gem 'aws-sdk'
+gem 'aws-sdk-v1'
 
 
 # Use SCSS for stylesheets
