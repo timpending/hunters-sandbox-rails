@@ -3,12 +3,12 @@ class UsersController < ApplicationController
 
 
   def hunt
-    if params[:q]
-      search_term = params[:q]
+    if params[:search_term]
+      search_term = params[:search_term]
       @searching = true;
-      @products = Product.unclaimed.where("LOWER(name) LIKE ?", "%#{search_term.downcase}%")
+      term =  "%#{search_term.downcase}%"
+      @products = Product.unclaimed.where("LOWER(name) LIKE ? OR LOWER(description) LIKE ?", term, term)
     end
-
   end
 
   def sell
