@@ -12,6 +12,7 @@ gem 'puma'
 gem 'rails', '4.2.4'
 
 gem "paperclip", "~> 4.3"
+gem 'aws-sdk'
 
 
 # Use SCSS for stylesheets
