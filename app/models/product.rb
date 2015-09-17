@@ -1,11 +1,12 @@
 class Product < ActiveRecord::Base
-  require 'aws-sdk-v1'
-  require 'aws-sdk'
+  #require 'aws-sdk-v1'
+  #require 'aws-sdk'
 
   belongs_to :order
   belongs_to :user
-  
+
   before_save :strip_currency_symbol
+
   validates_presence_of :name, :description, :price
   validates_numericality_of :price
 

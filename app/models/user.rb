@@ -6,5 +6,7 @@ class User < ActiveRecord::Base
 
   has_one :address
   has_many :orders
+  has_many :wishes
+  #has_many :wished_items , through: :wishes , class_name: :wish
   
 end

@@ -5,6 +5,10 @@
   <%= button_to 'Add to Cart', orders_path, class: 'btn', params: {'product_id' => @product.id}%>
 <% end %>
 
+<% unless @product.order_id.present? %>
+    <%= button_to 'Add to Wishlist', wishes_path, class: 'btn', params: {'product_id' => @product.id}%>
+<% end %>
+
 <br>
 
 <div class="show_block">
