@@ -28,11 +28,9 @@ class WishesController < ApplicationController
 
     respond_to do |format|
       if @wish.save
-        format.html { redirect_to @wish, notice: 'Wish was successfully created.' }
-        format.json { render :show, status: :created, location: @wish }
+        format.html { redirect_to wishlist_path, notice: 'Product added to wishlist.' }
       else
-        format.html { render :new }
-        format.json { render json: @wish.errors, status: :unprocessable_entity }
+        format.html { redirect_to products_path, notice: 'Unable to add item to wish list' }
       end
     end
   end
@@ -58,6 +56,21 @@ class WishesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to wishes_url, notice: 'Wish was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def destroy_wishes
+    product_id = params[:product]
+    @wishes = Wish.where(product_id: product_id, user_id: current_user.id )
+    if @wishes
+      @wishes.destroy_all
+      notice = "This item has been removed from your wish list";
+    else
+      notice = "Error deleting item from your wish list";
+    end
+
+    respond_to do |format|
+      format.html { redirect_to products_path, notice: notice }
     end
   end
 

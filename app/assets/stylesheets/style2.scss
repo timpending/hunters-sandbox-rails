@@ -12,6 +12,8 @@
   .order-footer{font-size:8px;}
 }
 
+.no-border{border:none; }
+
 #splash{
   width:100%;
   height:100%;
@@ -49,3 +51,118 @@ body#splash_body{
   label{position:relative; top:10px;}
 }
 
+.btn-sq {
+  width: 172px;
+  height: 45px;
+  font-size: 14px;
+  background-color: #fff;
+  float:left;
+  margin-right:10px;
+  font-family: Inconsolata;
+}
+
+.btn-buy-now, .btn-hntrs-red{
+  background-color: #B00100;
+  color: #fff;
+}
+
+.button-container{
+  width: 365px;
+  height: 50px;
+  clear:both;
+}
+
+.wishlist_block{
+  float:left;
+  clear:both;
+  margin-bottom: 100px;
+}
+
+
+$full_product_size : 322px;
+$mobile_product_size : 260px;
+
+$full_column_width: 405px;
+$full_column_height: 685px;
+
+$medium_column_width: 405px;
+$medium_column_height: 300px;
+
+$mobile_column_width: 405px;
+$mobile_column_height: 300px;
+
+
+
+.product-show{
+  .product-column{
+    width: $full_column_width;
+    height: $full_column_height;
+    float:left;
+  }
+  #product-pane{
+    width: $full_product_size;
+    height:300px;
+    border: 1px solid #000;
+    background-image: image-url('blank-product.gif');
+    background-size: $full_product_size;
+    background-repeat: no-repeat;
+  }
+}
+
+
+@media (max-width: 800px) {
+  /* Smaller Resolution Desktops and Laptops */
+  .product-show{
+    .product-column{
+      width: $medium_column_width;
+      height: $medium_column_height;
+      float:left;
+    }
+    #product-pane{
+      width: $medium_column_width;
+      height:300px;
+      border: 1px solid #000;
+      background-image: image-url('blank-product.gif');
+      background-size: $full_product_size;
+      background-repeat: no-repeat;
+    }
+  }
+
+
+}
+@media (max-width: 650px) {
+  /* Smaller devices */
+
+  .product-show{
+    .product-column{
+      width: $mobile_column_width;
+      height: $mobile_column_height;
+      float:left;
+    }
+    #product-pane{
+      width: $mobile_product_size;
+      height:300px;
+      border: 1px solid #000;
+      background-image: image-url('blank-product.gif');
+      background-size: $mobile_product_size;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .btn-sq {
+    width: 125px;
+    height: 35px;
+    font-size: 10px;
+    margin-top: 10px;
+  }
+
+
+}
+@media (max-width: 450px) {
+  /* Even Smaller devices */
+
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Even Smaller devices */
+
+}

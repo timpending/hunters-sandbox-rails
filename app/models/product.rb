@@ -4,6 +4,8 @@ class Product < ActiveRecord::Base
 
   belongs_to :order
   belongs_to :user
+  has_many :wishes
+  has_many :groupies, through: :wishes, source: :user
 
   before_save :strip_currency_symbol
 

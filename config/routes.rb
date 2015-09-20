@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   get 'feed' => 'users#feed'
 
   get 'cart' => 'carts#show'
+  get 'wishlist' => 'wishlist#index'
+  get 'destroy_wishes' => 'wishes#destroy_wishes'
 
   resources :orders
 

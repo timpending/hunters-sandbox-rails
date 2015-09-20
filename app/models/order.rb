@@ -12,7 +12,7 @@ class Order < ActiveRecord::Base
   end
 
   def expires_on
-    self.started_at + 2.minutes
+    self.started_at + 6.hours
   end
 
   private

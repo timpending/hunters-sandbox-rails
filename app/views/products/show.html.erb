@@ -1,27 +1,30 @@
-<% @title = "Showing product" %>
 
-<%# todo: hide below add to cart button also if @product.user == current_user %>
-<% unless @product.order_id.present? %>
-  <%= button_to 'Add to Cart', orders_path, class: 'btn', params: {'product_id' => @product.id}%>
-<% end %>
+<div class="product-show">
 
-<% unless @product.order_id.present? %>
-    <%= button_to 'Add to Wishlist', wishes_path, class: 'btn', params: {'product_id' => @product.id}%>
-<% end %>
+    <div class="product-column">
+      <div id="product-pane" style="background-image: url('<%= @product.avatar %>');"></div>
+    </div><!-- end first product column -->
 
-<br>
+   <div class="product-column">
+    <div class="button-container">
+      <%# todo: hide below add to cart button also if @product.user == current_user %>
+        <% unless @product.order_id.present? %>
+          <%= button_to 'Add to Cart', orders_path, class: 'btn-sq btn-buy-now', params: {'product_id' => @product.id}%>
+        <% end %>
 
-<div class="show_block">
-  <%= image_tag @product.avatar.url(:medium), style: "height: 200px;" %>
-</div>
-<div class="show_block">
-  <span class="show_title"><%= @product.name %></span>
-  <span><%= number_to_currency(@product.price) %></span>
-  <span>Seller: <%= @product.user.first_name || @product.user.email %></span>
-  <span><%= @product.description %></span>
-</div>
+        <% unless @product.order_id.present? %>
+            <%= button_to 'Want', wishes_path, class: 'btn-sq', params: {'product_id' => @product.id}%>
+        <% end %>
+    </div>
 
+    <div class="show_block">
+      <span class="show_title"><%= @product.name %></span>
+      <span><%= number_to_currency(@product.price) %></span>
+      <span>Seller: <%= @product.user.first_name || @product.user.email %></span>
+      <span><%= @product.description %></span>
+    </div>
+  </div><!-- end second product column -->
 
-
+</div><!-- end product show -->
 
 </div>
