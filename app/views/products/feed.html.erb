@@ -25,6 +25,7 @@
       </thead>
       <tbody>
       <% @products.each do |product| %>
+      <% if product.active %>
           <tr>
             <td><%= image_tag product.avatar.url(:thumb), style:"height:50px" %></td>
             <td><%= product.name %></td>
@@ -40,6 +41,7 @@
               <% end %>
             </td>
           </tr>
+        <% end %>
       <% end %>
       <% if @products.length == 0 %>
           <tr><td colspan=42 class='text-center'>No products.</td></tr>
@@ -48,4 +50,3 @@
     </table>
   </div><!-- /.sheet-inner -->
 </div><!-- /.sheet -->
-

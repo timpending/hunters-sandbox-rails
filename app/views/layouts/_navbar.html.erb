@@ -24,6 +24,7 @@
           <%= activatable_li_tag_with_link "Sell", sell_path %>
           <%= activatable_li_tag_with_link "Feed", products_path %>
           <%= activatable_li_tag_with_link "Cart", cart_path %>
+          <%= activatable_li_tag_with_link "Profile", profile_path %>
           <% if current_user && current_user.wished_items.present? %>
               <%= activatable_li_tag_with_link "Wishlist", wishlist_path %>
           <% end %>
